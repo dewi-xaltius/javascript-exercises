@@ -1,20 +1,53 @@
-// Task 5: Create a function to increase each expense by a given percentage and return the new array.
-function increaseExpenses(expenses, percentage) {
-    return expenses.map(expense => expense * (1 + percentage / 100));
-  }
-  
-  let increasedExpenses = increaseExpenses(expenses, 10);
-  console.log("Increased expenses by 10%:", increasedExpenses); // [55, 110, 165, 275, 330]
-  
-  // Task 5: Create a function to find a product by its name and print its details (name and price)
-  function findProductByName(products, name) {
-    let product = products.find(product => product.name === name);
-    if (product) {
-      console.log(`Product found: ${product.name}, Price: ${product.price}`);
-    } else {
-      console.log("Product not found");
+// Exercise 1 - Basic Calculator
+function add(a, b) {
+    return a + b;
+}
+
+function subtract(a, b) {
+    return a - b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function divide(a, b) {
+    if (b === 0) {
+        return 'Error: Division by zero';
     }
-  }
-  
-  findProductByName(products, "Shoes"); // Product found: Shoes, Price: 60
-  findProductByName(products, "Pants"); // Product not found
+    return a / b;
+}
+
+function calculate(operation) {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    let result;
+
+    switch (operation) {
+        case 'add':
+            result = add(num1, num2);
+            break;
+        case 'subtract':
+            result = subtract(num1, num2);
+            break;
+        case 'multiply':
+            result = multiply(num1, num2);
+            break;
+        case 'divide':
+            result = divide(num1, num2);
+            break;
+    }
+
+    document.getElementById('result').innerText = `Result: ${result}`;
+}
+
+// Exercise 2: Function with default parameters
+function greet(name = 'Guest') {
+    return `Hello, ${name}!`;
+}
+
+function displayGreeting() {
+    const name = document.getElementById('name').value;
+    const greeting = greet(name);
+    document.getElementById('result2').innerText = greeting;
+}

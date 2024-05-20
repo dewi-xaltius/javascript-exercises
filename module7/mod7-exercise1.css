@@ -1,0 +1,87 @@
+/* Style for the page */
+body {
+    height: 100vh;
+    background-color: #a5f3e6;
+    font-family: Roboto, sans-serif;
+}
+
+/* Style for the calculator container */
+.calculator {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+/* Style for the input fields */
+.calculator input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style for the buttons */
+.calculator button {
+    margin: 5px;
+    padding: 10px 20px;
+    flex: 1;
+    cursor: pointer;
+    background-color: #42edd1;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 50%;
+}
+
+/* Style for the container to wrap all the buttons */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Style for the result display */
+.result {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+    background: #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Style for the greeting container */
+.greeting {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+/* Style for the input field */
+.greeting input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    border-radius: 25px;
+}
+
+/* Style for the button */
+.greeting button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 25px;
+    border-color: rgb(14, 171, 239) ;
+    background-color: rgb(14, 171, 239);
+}
