@@ -118,3 +118,26 @@ document.addEventListener('DOMContentLoaded', function() {
     addButton.addEventListener('click', addRow);
 });
 
+// Exercise 5: Image Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    // Array of image sources
+    const images = ['imagePlaceholder1.webp', 'imagePlaceholder2.webp', 'imagePlaceholder3.webp'];
+    
+    // Get reference to the carousel image element
+    let carouselImage = document.getElementById('carouselImage');
+    
+    // Variable to keep track of the current image index
+    let currentIndex = 0;
+
+    // Function to change the image source
+    function changeImage() {
+        // Increment the current index
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        // Set the new image source
+        carouselImage.src = images[currentIndex];
+    }
+
+    // Change the image every seconds (1000 milliseconds)
+    setInterval(changeImage, 1000);
+});
