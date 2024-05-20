@@ -59,4 +59,40 @@ switch (operator) {
     console.log("Invalid operator");
 }
 
-  
+// Exercise 5: for Loop
+console.log("Exercise 5");
+let sum = 0;
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    sum += i;
+  }
+}
+
+console.log(sum); // 2550
+
+// Exercise 6: while loop
+console.log("Exercise 6: while loop")
+let countdown = 10; // Starting number for the countdown
+
+while (countdown >= 0) {
+  if (countdown === 0) {
+    console.log("Time's up!");
+  } else {
+    console.log(countdown);
+  }
+  countdown--;
+}
+
+// Exercise 6 :do while loop
+console.log("do while loop")
+countdown = 10;
+
+do {
+  if (countdown === 0) {
+    console.log("Time's up!");
+  } else {
+    console.log(countdown);
+  }
+  countdown--;
+} while (countdown >= 0);
