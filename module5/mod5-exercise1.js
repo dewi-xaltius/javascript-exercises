@@ -37,14 +37,7 @@ console.log(num3 > num4);  // false
 console.log(num3 <= num4); // true
 console.log(num3 >= num4); // false
 
-// Check if the user meets the age requirement to register on the website
-let userAge = 17;
-let minAge = 18;
-if (userAge >= minAge) {
-  console.log("User is old enough to register.");
-} else {
-  console.log("User is too young to register.");
-}
+
 
 // Check if the passwords match
 let password = "mypassword123";
