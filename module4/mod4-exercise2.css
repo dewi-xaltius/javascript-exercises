@@ -45,3 +45,41 @@ button {
   background-color: #5e41f2;
   color: white;
 }
+
+/* Exercise 4 */
+/* Styling for the FAQ container */
+.faq {
+  width: 80%;                      /* Sets the width to 80% of the parent container */
+  max-width: 600px;                /* Limits the maximum width to 600px */
+  margin: 20px 0;                  /* Adds margin above and below the container */
+}
+
+/* Styling for each FAQ item */
+.faq-item {
+  margin-bottom: 10px;             /* Adds margin below each FAQ item */
+  border: 1px solid #ccc;          /* Adds a light grey border */
+  border-radius: 5px;              /* Rounds the corners of the border */
+  overflow: hidden;                /* Hides overflow to ensure smooth transitions */
+}
+
+/* Styling for each question */
+.faq-question {
+  padding: 10px;                   /* Adds padding inside the question box */
+  background-color: #333;          /* Sets a dark background color */
+  color: white;                    /* Sets the text color to white */
+  cursor: pointer;                 /* Changes the cursor to a pointer on hover */
+}
+
+/* Initial styling for each answer */
+.faq-answer {
+  max-height: 0;                   /* Sets the initial max-height to 0 to hide the content */
+  overflow: hidden;                /* Hides overflow to ensure smooth transitions */
+  transition: max-height 0.3s ease-out; /* Adds a smooth transition effect */
+}
+
+/* Styling for the paragraph inside each answer */
+.faq-answer p {
+  padding: 10px;                   /* Adds padding inside the answer box */
+  margin: 0;                       /* Removes default margin */
+  background-color: white;         /* Sets a white background color */
+}
