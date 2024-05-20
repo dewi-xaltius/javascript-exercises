@@ -85,3 +85,36 @@ body {
     border-color: rgb(14, 171, 239) ;
     background-color: rgb(14, 171, 239);
 }
+
+/* Exercise 3: Function Scope */
+/* Style for the counter container */
+.counter {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+/* Style for the button */
+.counter button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: none;
+    background-color: #326aef;
+    color: white;
+}
+
+/* Style for the counter display */
+.count {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background: #80a1ec;
+    border-radius: 5px;
+}

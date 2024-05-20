@@ -51,3 +51,15 @@ function displayGreeting() {
     const greeting = greet(name);
     document.getElementById('result2').innerText = greeting;
 }
+
+// Exercise 3: Function Scope
+function createCounter() {
+    let counter = 0;
+
+    return function incrementCounter() {
+        counter++;
+        document.getElementById('count').innerText = `Counter: ${counter}`;
+    };
+}
+
+const incrementCounter = createCounter();
