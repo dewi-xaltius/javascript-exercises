@@ -36,4 +36,27 @@ if (score >= 90) {
   console.log("F");
 }
 
+// Exercise 4: switch Statement
+console.log("Exercise 4")
+const num1 = 5;
+const num2 = 3;
+const operator = '+'; // User's input for operator
+
+switch (operator) {
+  case '+':
+    console.log(num1 + num2);
+    break;
+  case '-':
+    console.log(num1 - num2);
+    break;
+  case '*':
+    console.log(num1 * num2);
+    break;
+  case '/':
+    console.log(num1 / num2);
+    break;
+  default:
+    console.log("Invalid operator");
+}
+
   
