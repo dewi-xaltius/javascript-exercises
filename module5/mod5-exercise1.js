@@ -37,13 +37,35 @@ console.log(num3 > num4);  // false
 console.log(num3 <= num4); // true
 console.log(num3 >= num4); // false
 
+// Exercise 3: Array Manipulation
+console.log("Exercise 3")
+// Declare an array of numbers representing different expenses. Modify the array and print it.
+let expenses = [200, 150, 300, 50, 100];
+expenses.push(250); // Add new expense
+expenses.shift(); // Remove the first expense
+expenses.sort((a, b) => a - b); // Sort the array in ascending order
+console.log("Modified expenses:", expenses); // [50, 100, 150, 250, 300]
 
+// Calculate the total expenses by summing all elements in the array and print the total.
+let totalExpenses = expenses.reduce((sum, expense) => sum + expense, 0);
+console.log("Total expenses:", totalExpenses); // 850
 
-// Check if the passwords match
-let password = "mypassword123";
-let confirmPassword = "mypassword123";
-if (password === confirmPassword) {
-  console.log("Passwords match.");
-} else {
-  console.log("Passwords do not match.");
+// Find the highest and lowest expenses in the array and print them.
+let highestExpense = Math.max(...expenses);
+let lowestExpense = Math.min(...expenses);
+console.log("Highest expense:", highestExpense); // 300
+console.log("Lowest expense:", lowestExpense); // 50
+
+// Filter out expenses that are above a certain threshold (e.g., 100) and print the filtered array.
+let threshold = 100;
+let filteredExpenses = expenses.filter(expense => expense > threshold);
+console.log("Filtered expenses:", filteredExpenses); // [150, 250, 300]
+
+// Task 5: Create a function to increase each expense by a given percentage and return the new array.
+function increaseExpenses(expenses, percentage) {
+  return expenses.map(expense => expense * (1 + percentage / 100));
 }
+
+let increasedExpenses = increaseExpenses(expenses, 10);
+console.log("Increased expenses by 10%:", increasedExpenses); // [55, 110, 165, 275, 330]
+
