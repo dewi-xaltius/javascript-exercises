@@ -1,0 +1,15 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the icon used as the dropdown trigger */
+.dropicon {
+    font-size: 20px;
+    cursor: pointer;
+}
