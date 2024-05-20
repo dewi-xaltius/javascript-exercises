@@ -61,4 +61,34 @@ let threshold = 100;
 let filteredExpenses = expenses.filter(expense => expense > threshold);
 console.log("Filtered expenses:", filteredExpenses); // [150, 250, 300]
 
-
+// Exercise 4: Dynamic Computation
+console.log("Exercise 4");
+// Create an array of objects representing products and calculate the total price of all products
+let products = [
+    {name: "Shirt", price: 20},
+    {name: "Pants", price: 40},
+    {name: "Shoes", price: 60}
+];
+  
+let totalPrice = products.reduce((sum, product) => sum + product.price, 0);
+console.log("Total Price:", totalPrice); // 120
+  
+// Add a new product to the array and print the updated list of products
+let newProduct = {name: "Hat", price: 25};
+products.push(newProduct);
+console.log("Updated products:", products);
+// [{name: "Shirt", price: 20}, {name: "Pants", price: 40}, {name: "Shoes", price: 60}, 
+// {name: "Hat", price: 25}]
+  
+// Remove a product by its name and print the updated list of products
+let productNameToRemove = "Pants";
+products = products.filter(product => product.name !== productNameToRemove);
+console.log("Products after removal:", products);
+// [{name: "Shirt", price: 20}, {name: "Shoes", price: 60}, {name: "Hat", price: 25}]
+  
+// Calculate the average price of the products and print it
+let averagePrice = products.reduce((sum, product) => sum + product.price, 0) / products.length;
+console.log("Average Price:", averagePrice); // 35
+  
+  
+  
