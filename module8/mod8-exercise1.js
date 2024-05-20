@@ -49,3 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize by checking the empty message on page load
     checkEmptyMessage();
 });
+
+// Exercise 3
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the input field and validate button
+    let inputField = document.getElementById('inputField');
+    let validateButton = document.getElementById('validateButton');
+
+    // Function to validate the form input
+    function validateInput() {
+        let inputText = inputField.value.trim();
+
+        // Check if the input is empty
+        if (inputText === "") {
+            // Show an alert if the input is empty
+            alert("Input cannot be empty!");
+        } else {
+            // Show a success message if the input is not empty
+            alert("Input is valid!");
+        }
+    }
+
+    // Add an event listener to the button to call validateInput when clicked
+    validateButton.addEventListener('click', validateInput);
+});
