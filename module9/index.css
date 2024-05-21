@@ -1,0 +1,73 @@
+/* Basic styling for the body */
+body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-weight: 600;
+    color: #16a3fa;
+}
+
+/* Container for the to-do list app */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the input field */
+#new-task-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+/* Styling for the add task button */
+#add-task-button {
+    padding: 10px 20px;
+    background: #51BBFE;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#add-task-button:hover {
+    background: #16a3fa;
+}
+
+/* Container for the task list */
+#task-list {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Styling for individual tasks */
+.task {
+    padding: 10px;
+    margin: 1rem auto;
+    border: 1px solid #51BBFE;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 75%;
+    
+}
+
+/* Styling for completed tasks */
+.task.completed {
+    text-decoration: line-through;
+    color: #999;
+}
