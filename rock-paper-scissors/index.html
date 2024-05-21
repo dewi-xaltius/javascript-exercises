@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <!-- User choice buttons -->
+        <div class="user-choices">
+            <button id="rock" class="choice">✊</button>
+            <button id="paper" class="choice">✋</button>
+            <button id="scissors" class="choice">✌</button>
+        </div>
+        <!-- Display computer's choice -->
+        <div class="computer-choice">
+            <h2>Computer's Choice:</h2>
+            <p id="computer-hand">❓</p>
+        </div>
+        <!-- Display the score -->
+        <div class="score-board">
+            <h2>Score</h2>
+            <p>Wins: <span id="wins">0</span></p>
+            <p>Losses: <span id="losses">0</span></p>
+            <p>Draws: <span id="draws">0</span></p>
+        </div>
+        <!-- Button to show game rules -->
+        <button id="rules-btn">Show Rules</button>
+    </div>
+    <!-- Rules pop-up -->
+    <div id="rules-popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <h2>Rules</h2>
+            <p>Rock beats Scissors</p>
+            <p>Scissors beats Paper</p>
+            <p>Paper beats Rock</p>
+        </div>
+    </div>
+    <!-- Link to JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>
