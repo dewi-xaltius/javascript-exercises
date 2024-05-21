@@ -5,13 +5,30 @@
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
+    background-color: #bde0fe;
   }
+  
+  /* Styles for the headings  */
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
+
+  /* Styles for links (a elements) */
+a {
+  color: #03256c; /* Sets the text color for links */
+  text-decoration: none; /* Removes the underline from links */
+}
+
+/* Hover effect for links */
+a:hover {
+  text-decoration: underline; /* Adds an underline on hover */
+}
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #1768ac;
     color: aliceblue;
   }
   
@@ -59,6 +76,55 @@
     border-radius: 10px;
   }
   
+/* Flexbox container for blog sections */
+.blog-container {
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: space-between; /* Spaces out items evenly */
+  margin-top: 20px; /* Adds margin above the container */
+}
+
+/* Individual blog sections */
+.blog-section {
+  flex: 1; /* Each section takes up equal space */
+  margin: 10px; /* Adds space around each section */
+  padding: 20px; /* Adds padding inside each section */
+  border-radius: 25px; /* Rounds the corners of each section */
+}
+
+/* Specific colors for each blog section */
+.blog-section-1 {
+  background-color: #e0f7ff; /* Lightest shade */
+}
+
+.blog-section-2 {
+  background-color: #d0f0ff; /* Lighter shade */
+}
+
+.blog-section-3 {
+  background-color: #c0eaff; /* Light shade */
+}
+
+/* Footer styling */
+footer {
+  background-color: #1768ac; /* Sets a different background color for the footer */
+  color: white; /* Sets the text color for the footer */
+  margin-top: 2rem;
+  padding: 10px 20px; /* Adds padding inside the footer */
+  display: flex; /* Uses Flexbox for layout */
+  justify-content: space-between; /* Spaces out items to the left and right */
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+/* Styling for footer links */
+footer a {
+  color: white; /* Sets the text color for footer links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
   @media (max-width:700px) {
     .toggle-button {
       display:flex;
@@ -80,7 +146,7 @@
     }
   
     .navbar-links li {
-      text-align: right;
+      text-align: center;
     }
   
     .navbar-links li a {
@@ -92,3 +158,14 @@
       display: flex;
     }
   }
+
+/* Responsive styles for blog sections */
+@media (max-width: 768px) {
+  .blog-container {
+      flex-direction: column; /* Stack blog sections vertically */
+  }
+
+  .blog-section {
+      margin: 1rem; /* Add space between blog sections */
+  }
+}
