@@ -1,19 +1,20 @@
 * {
     box-sizing: border-box;
-  }
-  body {
+}
+  
+body {
     margin: 0;
     padding: 0;
     font-family: Roboto, sans-serif;
     background-color: #bde0fe;
-  }
+}
   
-  /* Styles for the headings  */
-  h1, h2, h3, h4 {
-    text-align: center;
-  }
+/* Styles for the headings  */
+h1, h2, h3, h4 {
+  text-align: center;
+}
 
-  /* Styles for links (a elements) */
+/* Styles for links (a elements) */
 a {
   color: #03256c; /* Sets the text color for links */
   text-decoration: none; /* Removes the underline from links */
@@ -23,58 +24,56 @@ a {
 a:hover {
   text-decoration: underline; /* Adds an underline on hover */
 }
+
+/* Styling for Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1768ac;
+  color: aliceblue;
+}
   
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1768ac;
-    color: aliceblue;
-  }
+.page-title {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
   
-  .page-title {
-    font-size: 1.5rem;
-    margin: 1rem;
-  }
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
   
-  .navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
+.navbar-links li {
+  list-style: none;
+}
   
-  .navbar-links li {
-    list-style: none;
-  }
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 2rem;
+  display: block; 
+}
   
-  .navbar-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 2rem;
-    display: block; 
-  }
+/* Styling for toggle button  */
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
   
-  /* .navbar-links li:hover {
-    background-color: #555;
-  } */
-  
-  .toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-  }
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
   
 /* Flexbox container for blog sections */
 .blog-container {
@@ -125,39 +124,39 @@ footer a:hover {
   text-decoration: underline; /* Adds underline on hover */
 }
 
-  @media (max-width:700px) {
-    .toggle-button {
-      display:flex;
-    }
-  
-    .navbar-links {
-      display: none;
-      width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
-    }
-  
-    .navbar-links li {
-      text-align: center;
-    }
-  
-    .navbar-links li a {
-      padding: 0.5rem 1rem;
-      /* background-color: #555; */
-    }
-  
-    .navbar-links.active {
-      display: flex;
-    }
+/* Styling for Responsive Toggle Button */
+@media (max-width:768px) {
+  .toggle-button {
+    display:flex;
   }
+  
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .navbar-links li {
+    text-align: center;
+  }
+  
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-links.active {
+    display: flex;
+  }
+}
 
 /* Responsive styles for blog sections */
 @media (max-width: 768px) {
