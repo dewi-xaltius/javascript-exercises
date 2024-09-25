@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Price Calculation with Strings</title>
+    <title>Dynamic Price Calculation and String Output</title>
 </head>
 <body>
     <h1>Dynamic Computation Combining Numbers and Strings</h1>
@@ -19,25 +19,30 @@
     <p><span id="output"></span></p>
 
     <script>
-        // Event listeners for all input fields
-        document.getElementById('item').addEventListener('input', updateOutput);
-        document.getElementById('price').addEventListener('input', updateOutput);
-        document.getElementById('quantity').addEventListener('input', updateOutput);
-
-        // Function to update the output based on inputs
-        function updateOutput() {
+        // Add event listeners that perform calculations and string concatenation inline
+        document.getElementById('item').addEventListener('input', function() {
             let item = document.getElementById('item').value;
             let price = parseFloat(document.getElementById('price').value);
             let quantity = parseInt(document.getElementById('quantity').value);
+            let total = price * quantity;
+            document.getElementById('output').textContent = "You ordered " + quantity + " " + item + "(s) for a total of $" + total.toFixed(2);
+        });
 
-            if (item && price && quantity) {
-                let total = price * quantity; // Calculating total
-                let output = "You ordered " + quantity + " " + item + "(s) for a total of $" + total.toFixed(2);
-                document.getElementById('output').textContent = output;
-            } else {
-                document.getElementById('output').textContent = ""; // Clear output if any input is missing
-            }
-        }
+        document.getElementById('price').addEventListener('input', function() {
+            let item = document.getElementById('item').value;
+            let price = parseFloat(document.getElementById('price').value);
+            let quantity = parseInt(document.getElementById('quantity').value);
+            let total = price * quantity;
+            document.getElementById('output').textContent = "You ordered " + quantity + " " + item + "(s) for a total of $" + total.toFixed(2);
+        });
+
+        document.getElementById('quantity').addEventListener('input', function() {
+            let item = document.getElementById('item').value;
+            let price = parseFloat(document.getElementById('price').value);
+            let quantity = parseInt(document.getElementById('quantity').value);
+            let total = price * quantity;
+            document.getElementById('output').textContent = "You ordered " + quantity + " " + item + "(s) for a total of $" + total.toFixed(2);
+        });
     </script>
 </body>
 </html>
