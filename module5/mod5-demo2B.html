@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic String Concatenation</title>
+</head>
+<body>
+    <h1>Concatenating Strings from User Input</h1>
+    <h3>Using Function</h3>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName">
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName">
+
+    <p>Full Name: <span id="fullName"></span></p>
+
+    <script>
+        // Update full name when either first or last name is entered
+        document.getElementById('firstName').addEventListener('input', updateFullName);
+        document.getElementById('lastName').addEventListener('input', updateFullName);
+
+        function updateFullName() {
+            let firstName = document.getElementById('firstName').value;
+            let lastName = document.getElementById('lastName').value;
+            let fullName = firstName + " " + lastName; // String concatenation
+            document.getElementById('fullName').textContent = fullName;
+        }
+    </script>
+</body>
+</html>
