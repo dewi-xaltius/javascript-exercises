@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples</title>
+</head>
+<body>
+    <!-- DOM Manipulation -->
+     <!-- paragraph -->
+    <p id="myParagraph">This is some initial text.</p>
+    <button onclick="changeText()">Change Text</button>
+    
+    <script>
+      function changeText() {
+        const paragraph = document.getElementById('myParagraph');
+        paragraph.textContent = 'This is updated text.';
+      }
+    </script>
+
+    <!-- list -->
+      <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      
+      <button onclick="addItem()">Add Item</button>
+      
+      <script>
+        function addItem() {
+          const list = document.getElementById('myList');
+          const newItem = document.createElement('li');
+          newItem.textContent = 'New Item';
+          list.appendChild(newItem);
+        }
+      </script>
+      
+
+    <!-- Form Validation -->
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter username">
+        <span id="errorMessage" style="color: red;"></span>
+        <button onclick="validateForm()">Submit</button>
+      </form>
+      
+      <script>
+        function validateForm() {
+          const username = document.getElementById('username').value;
+          const errorMessage = document.getElementById('errorMessage');
+      
+          if (username.length < 5) {
+            errorMessage.textContent = 'Username must be at least 5 characters long';
+          } else {
+            errorMessage.textContent = '';
+            // Submit the form or perform other actions here
+          }
+        }
+      </script>
+      
+
+    <!-- Interactive button -->
+    <button id="myButton">Click me</button>
+    <script>
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+
+
+    <!-- Dropdown menu -->
+    <select id="mySelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      
+      <script>
+        const select = document.getElementById('mySelect');
+      
+        select.addEventListener('change', function() {
+          const selectedOption = select.options[select.selectedIndex].value;
+          alert(`Selected option: ${selectedOption}`);
+        });
+      </script>
+      
+      <!-- Image Slider -->
+    <div id="slider">
+        <img src="image1.jpg">
+        <img src="image2.jpg">
+        <img src="image3.jpg">
+      </div>
+      
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
+      
+      <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('#slider img');
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+          });
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        }
+      
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+          showSlide(currentIndex);
+        }
+      
+        showSlide(currentIndex);
+      </script>
+      
+</body>
+</html>
