@@ -43,6 +43,9 @@ function calculate(operation) {
 
 // Exercise 2: Function with default parameters
 function greet(name = 'Guest') {
+    if (name.trim() === '') {
+        name = 'Guest';
+    }
     return `Hello, ${name}!`;
 }
 
